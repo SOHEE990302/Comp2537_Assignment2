@@ -231,7 +231,26 @@ app.get("/loggedin", (req, res) => {
   });
 
 
+  const imageURL = [
+    "image1.gif",
+    "image2.gif",
+    "image3.gif",
+    "image4.gif"
+  ];
 
+  app.get("/image/:id", (req, res) => {
+  var meme = req.params.id;
+
+  if (meme == 1) {
+    res.send(`<img src='/${imageURL[0]}'>`);
+  } else if (meme == 2) {
+    res.send(`<img src='/${imageURL[1]}'>`);
+  } else if (meme == 3) {
+    res.send(`<img src='/${imageURL[2]}'>`);
+  } else {
+    res.send(`<img src='/${imageURL[3]}'>`);
+  }
+});
 
   app.get("/members", (req, res) => {
     if (!req.session.name) {
