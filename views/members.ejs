@@ -1,0 +1,82 @@
+<%- include("templates/headers") %>
+<head>
+  <style>
+    .bordered-column {
+      border-style: groove;
+      border-width: 13px;
+      border-color: rgb(99, 99, 242);
+      padding: 15px;
+    }
+
+    .uniform-image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin: auto;
+    }
+  </style>
+</head>
+<div class="container-fluid">
+  <h1>Welcome to the Member's Area, <%= username %>!</h1>
+</div>
+<div class="container-fluid">
+  <h2 style="padding-bottom: 30px">Full of popular cat memes!</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="card1.gif"
+        class="img-responsive uniform-image"
+        alt="kero1"
+      />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img src="card2.gif" class="img-responsive uniform-image" alt="kero2" />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="card3.gif"
+        class="img-responsive uniform-image"
+        alt="kero3"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="card4.gif"
+        class="img-responsive uniform-image"
+        alt="kero4"
+      />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img src="card5.gif" class="img-responsive uniform-image" alt="kero5" />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="card6.gif"
+        class="img-responsive uniform-image"
+        alt="kero6"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" style="padding-top: 50px; padding-bottom: 30px;">
+  <a
+    class="btn btn-primary"
+    href="/"
+    role="button"
+    style="margin: auto; padding: 10px; font-size: 20px"
+    >Home</a
+  >
+  <a
+    class="btn btn-primary"
+    href="/logout"
+    role="button"
+    style="margin: auto; padding: 10px; font-size: 20px"
+    >Log out</a
+  >
+</div>
+<%- include("templates/footer") %>
